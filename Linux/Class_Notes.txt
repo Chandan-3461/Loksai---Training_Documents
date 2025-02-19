@@ -225,7 +225,7 @@ Day 2 : 4th Dec. 2024
 		
 		Tomcat/Nginx/Jenkins			# Executed as a Service 
 		
-		Maven							# Executed as a Tool 
+		Maven					# Executed as a Tool 
 		
 		MY_SQL DataBase 
 		
@@ -317,7 +317,7 @@ Day 2 : 4th Dec. 2024
 			
 	
 	echo "Hello" >> file1.txt			# Create a file with content
-										# Add More Records to a file 
+							# Add More Records to a file 
 								
 	echo "Dummy Record" > file1.txt		# Replace the file content 	
 	
@@ -344,13 +344,13 @@ Day 2 : 4th Dec. 2024
 	
 	rm <file_name>						# Remove a file 	
 	
-	rm -rf dir3							# Remove a directory	
+	rm -rf dir3						# Remove a directory	
 	
 	touch .file_name 					# Create Hidden File 
 	
-	mkdir .dir1							# Hidden Directory
+	mkdir .dir1						# Hidden Directory
 	
-	ll									# Long Listing 
+	ll							# Long Listing 
 	
     1  exit
     2  apt update
@@ -742,7 +742,7 @@ Day 3 : 5th Dec. 2024
 			
 			useradd devopsadmin -s /bin/bash -m -d /home/devopsadmin		# Ubuntu 
 			
-			useradd devopsadmin												# Non - Ubuntu Machines
+			useradd devopsadmin							# Non - Ubuntu Machines
 
 
 			useradd user1
@@ -993,7 +993,7 @@ Day 4 : 6th Dec. 2024
 	
 	Who can execute the Scripts ?
 	
-	Owner 			--> RWE
+	Owner 		--> RWE
 	
 	Group Users 	--> RWE
 	
@@ -1046,7 +1046,7 @@ Day 4 : 6th Dec. 2024
 	
 		sudo apt install jdk_11	    
 		sudo apt install maven 		
-        sudo apt install docker 
+        	sudo apt install docker 
 		
 	save 
 	
@@ -1093,7 +1093,6 @@ Day 4 : 6th Dec. 2024
 	
 	Scripting / Progamming Languages are used to handle ?
 	
-	
 	Data !
 	
 	What is Data ?
@@ -1134,11 +1133,11 @@ Day 4 : 6th Dec. 2024
 			
 				IF Conditions 
 				
-					If else 
+				If else 
 					 
-						If else-if 
+				If else-if 
 						
-							Nested If Conditions 
+				Nested If Conditions 
 							
 			
 				Switch Case Statement : To validate the exepected list of data 
@@ -1147,7 +1146,7 @@ Day 4 : 6th Dec. 2024
 				Email_ID : ****@gmail.com
 				
 					
-						Email_ID == ****@gmail.com
+				Email_ID == ****@gmail.com
 						
 			
 			Operators : 
@@ -1160,7 +1159,7 @@ Day 4 : 6th Dec. 2024
 		Array :
 		
 			student_name[5] : {"zzz" , "xxx", "yyyy", "xxx", "yyyy"}	
-								0		1		2		3		4
+					     0	     1	     2	    3	    4
 								
 				student_name[0] = "zzz"
 				
@@ -1198,7 +1197,7 @@ Day 4 : 6th Dec. 2024
 		
 			- Data is organized in the form of Tables 
 			
-			- - Using Rows and Columns 
+			- Using Rows and Columns 
 			
 			Students_Table:
 			
@@ -1221,7 +1220,7 @@ Day 4 : 6th Dec. 2024
 		#
 		sudo apt install jdk_11	-y   
 		sudo apt install maven 	-y	
-        sudo apt install docker.io -y
+        	sudo apt install docker.io -y
 		
 	save
 	
