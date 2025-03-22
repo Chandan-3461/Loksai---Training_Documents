@@ -121,15 +121,14 @@ Related to the Project :::
 			
 			Scheduler				--> # To identify the Healthy Node for Deployments
 			
-			Controller Manager 		--> # To run the pods in its desired state 
+			Controller Manager 		  	--> # To run the pods in its desired state 
 			
 			
 			Kubelet 				--> # Is a Kubernetes Agent used to Create & Deploy the Pods
 			
 			KubeProxy				--> # Is used to enable pod networking by create Pod IP Address			
 			
-			CRI - Container RunTime Interface (Container-D)
-									--> # It is used identify the Image from Container Registry for deployment
+			CRI - Container RunTime Interface (Container-D) 	--> # It is used identify the Image from Container Registry for deployment
 				
 				
 		
@@ -138,30 +137,30 @@ Related to the Project :::
 		
 			Kubernetes_Master			# Used to Create and Schedule the Deployments to Kubernetes_WorkerNodes
 			
-			Kubernetes_WorkNodes		# Target Servers 
+			Kubernetes_WorkNodes			# Target Servers 
 
-			Kubectl 					# Is Command Line Utility, used to interact with Kubernetes Master 
+			Kubectl 				# Is Command Line Utility, used to interact with Kubernetes Master 
 			
 			
 	Concepts & Terminologies ::::
 	
-		PODS :::	--> Atomic unit of Schedule.
+		PODS :::		--> Atomic unit of Schedule.
 					--> Smallest unit of Task.
-					-->	Any Task we execute in Kubernetes will be executed as Pod
+					--> Any Task we execute in Kubernetes will be executed as Pod
 					--> Pod runs the container within that.
 		
-		KUBECTL :::	--> Is a Command Line Utility to interract with Kubernetes Master.
+		KUBECTL :::		--> Is a Command Line Utility to interract with Kubernetes Master.
 		
 		
 		Kubernetes Cluster ::::
 		
 					--> Kubernetes Cluster is a Collection of Worker Nodes.
 					
-					Kubernetes Master 				1 Master Node.
+						Kubernetes Master 				1 Master Node.
 					
-						Kubernetes_WorkNode1
-						Kubernetes_WorkNode2
-						Kubernetes_WorkNode3
+							Kubernetes_WorkNode1
+							Kubernetes_WorkNode2
+							Kubernetes_WorkNode3
 
 						
 						Auto-Scaling Group -->
@@ -171,7 +170,7 @@ Related to the Project :::
 				Load Balancer!
 				Kubernetes_Master:::	
 				
-					Kubernetes_Master1 									AWS Cloud 					
+					Kubernetes_Master1 										AWS Cloud 					
 						Cluster1										Region1
 							Kubernetes_WorkNode1
 							Kubernetes_WorkNode2
@@ -185,7 +184,7 @@ Related to the Project :::
 							Kubernetes_WorkNode2
 							Kubernetes_WorkNode3						
 																			
-					Kubernetes_Master2 									AWS Cloud 					
+					Kubernetes_Master2 										AWS Cloud 					
 						Cluster1										Region4
 							Kubernetes_WorkNode1
 							Kubernetes_WorkNode2
