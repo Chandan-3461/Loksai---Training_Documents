@@ -94,9 +94,9 @@ Related to the Project :::
 				DEV 
 				BUILD 
 				Test 
-					QA 
-					UAT 				===========>			Production Server1,2,3,4,5
-											*.war 
+				QA 
+				UAT 				===========>			Production Server1,2,3,4,5
+								  *.war 
 										
 		www.amazon.com ==> This web application is host in the Production Environment
 		
