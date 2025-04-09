@@ -319,6 +319,22 @@ Loops :
          state: present
 
 
+Loops :::
+
+---
+  - hosts: samplenode1
+    gather_facts: false
+    become: yes
+    tasks:
+      - apt:
+         name: "{{item}}"
+         state: absent
+        loop:
+          - git_2.81.0
+          - maven
+          - nginx
+
+
 		
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~ register and set-facts
@@ -342,20 +358,7 @@ Loops :
 
 
 
-Loops :::
 
----
-  - hosts: samplenode1
-    gather_facts: false
-    become: yes
-    tasks:
-      - apt:
-         name: "{{item}}"
-         state: absent
-        loop:
-          - git_2.81.0
-          - maven
-          - nginx
 
 
 
