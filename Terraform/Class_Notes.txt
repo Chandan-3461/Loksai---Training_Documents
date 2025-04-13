@@ -120,9 +120,9 @@ Day 29 : 28th Jan. 2025
 		Using Terraform  we can :
 		
 		
-			1. Create/Add Resources 		+
+			1. Create/Add Resources 	+
 			
-			2. Update/Modify Resources 		~
+			2. Update/Modify Resources 	~
 			
 			3. Delete/Destroy Resources 	-
 			
@@ -133,7 +133,7 @@ Day 29 : 28th Jan. 2025
 			
 			- Goto Terminal Menu and Open Terminal 
 			
-			-	$ terraform --version
+			- $ terraform --version
 
 provider "aws" {
   region     = "ap-south-1"
@@ -144,11 +144,9 @@ provider "aws" {
 # Create AWS Instance
 
 resource "aws_instance" "instance1" {
-  
   ami           = "ami-0dee22c13ea7a9a67"
   instance_type = "t2.micro"
   key_name      = "may20-keypair"
-
   tags = {
     Name = "TestInstance1"
   }
@@ -193,7 +191,7 @@ Day 30 : 29th Jan. 2025
 		Terraform State File ::::
 		
 			- Gets created/Updated when we execute terraform apply Command.
-			- terrafom.tfstate file is used maintain the current status of the real infra-structure.
+			- terrafom.tf state file is used maintain the current status of the real infra-structure.
 		
 		Create Terraform Project with New VPC and associated resources 
 		
@@ -213,9 +211,9 @@ Day 30 : 29th Jan. 2025
 	
 		Pipeline 1:		# Infra-Structure Provision & Configure Infra-Structure
 		
-			SCM_Checkout	==> 	Provision/Create New_Test_Server(Terraform)	==>		Configure New_Test_Server(Ansible)
+			SCM_Checkout	==> 	Provision/Create New_Test_Server(Terraform)	==>	Configure New_Test_Server(Ansible)
 			
-			
+		Pipeline 2:	
 		Jenkins CICD Pipeline :
 		
 			SCM_Checkout ==> Application_Build	==> Deployed to New_Test_Server	
@@ -231,13 +229,13 @@ Day 30 : 29th Jan. 2025
 						
 						==>	Configure New_Test_Server(Ansible)	
 
-							==> Deployed to New_Test_Server	
+							==>	Deployed to New_Test_Server	
 							
-								==> Automated Testing (Selenium)
+								==>	Automated Testing (Selenium)
 								
-									==> Send the Test Result to Dev_Team  
+									==> 	Send the Test Result to Dev_Team  
 									
-										==> Destroy New_Test_Server and End the Pipeline
+										==>	Destroy New_Test_Server and End the Pipeline
 		
 Terraform CLI Commands :
 
