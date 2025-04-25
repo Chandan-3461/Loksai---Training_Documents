@@ -195,7 +195,7 @@ Day 11 : 19th Dec. 2024
 
 				Eg.: 
 				
-				mvn clean package 
+				mvn clean package   - first it cleans target folder and then compiles, test and create artifacts in the target folder of Project Library.
 				
 				
 			Code Coverage :::
