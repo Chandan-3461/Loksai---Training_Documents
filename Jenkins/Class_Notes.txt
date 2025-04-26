@@ -113,15 +113,16 @@ Day 13 : 24th Dec. 2024
 		
 		
 			
-	Handling Variables in Jenkins :
-	
-		- Environment Variables :
-		
-			"${JOB_NAME}"
-		
-		
-		- User-Defined Variables :
-		
+			Handling Variables in Jenkins :
+			
+				- Environment Variables :
+				
+					"${JOB_NAME}"
+				
+				
+				- User-Defined Variables :
+					- these are managed by users to handle the runtime inputs.
+
 		
 
 		- Pipeline Projects		
@@ -132,7 +133,7 @@ Day 13 : 24th Dec. 2024
 			# Pipeline composed of various stages
 			# Stages are used to execute some task.
 			
-			Jenkins_Master Node(VM)		- Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
+		Jenkins_Master Node(VM)		- Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
 			
 		CI/CD Workflow :::
 		
@@ -214,7 +215,7 @@ Day 14 : 26th Dec. 2024
 	- Jenkins is based on Master-Slave Architecture ::
 	
 		Jenkins_Master Node(VM)		- Install jdk,jenkins,git.
-									- Used to Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
+						- Used to Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
 								
 			Jenkins_Slave Node(VM)	- To Execute the Application Build.
 						Agent		- Perform Application Build - Compile, Unit Test, Create Artifacts 
