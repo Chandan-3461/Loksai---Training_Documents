@@ -20,10 +20,10 @@ Day 12 : 20th Dec. 2024
 		- Jenkins is based on Master-Slave Architecture ::
 		
 			Jenkins_Master Node(VM)		- Install jdk,jenkins,git.
-										- Used to Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
+							- Used to Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
 									
 				Jenkins_Slave Node(VM)	- To Execute the Application Build.
-										- Perform Application Build - Compile, Unit Test, Create Artifacts 
+							- Perform Application Build - Compile, Unit Test, Create Artifacts 
 									
 
 				- Build the Source Code 		
@@ -35,7 +35,7 @@ Day 12 : 20th Dec. 2024
 			
 		Scenario 2 :
 		
-            Jenkins_Master Node(VM)		- Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
+         		Jenkins_Master Node(VM)		- Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
 			
 				Jenkins_Slave_Node1(VM)	- Java Application Build maven
 				Jenkins_Slave_Node2(VM)	- Python Application Build
