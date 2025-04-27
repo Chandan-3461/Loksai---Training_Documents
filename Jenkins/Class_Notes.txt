@@ -218,7 +218,7 @@ Day 14 : 26th Dec. 2024
 						- Used to Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
 								
 			Jenkins_Slave Node(VM)	- To Execute the Application Build.
-						Agent		- Perform Application Build - Compile, Unit Test, Create Artifacts 
+					Agent		- Perform Application Build - Compile, Unit Test, Create Artifacts 
 	
 	
 	Jenkins_Master Node(VM)			--> git, jdk, jenkins 
@@ -285,12 +285,12 @@ pipeline {
 									- Used to Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
 								
 			Jenkins_Slave Node(VM)	- To Execute the Application Build.
-						(Agent)		- Perform Application Build - Compile, Unit Test, Create Artifacts 
+				(Agent)		- Perform Application Build - Compile, Unit Test, Create Artifacts 
 						
 						
 		Tomcat_Server (VM)			- To Execute and Test the Application Artifacts (*.war)
-									- Install jdk, Tomcat.
-									- Tomcat WAS runs in port 8080
+							- Install jdk, Tomcat.
+							- Tomcat WAS runs in port 8080
 		
 			-> Host Name 
 			-> User Name 
