@@ -180,9 +180,9 @@ su - devopsadmin
 #ssh-keygen
 
 #for Ubuntu ::
-#ssh-keygen -t rsa -b 2048 -m PEM								#ubuntu 20.04
+#ssh-keygen -t rsa -b 2048 -m PEM				#ubuntu 20.04
 
-ssh-keygen -t ecdsa -b 521										#ubuntu 22.04 or higher version of ubuntu				
+ssh-keygen -t ecdsa -b 521					#ubuntu 22.04 or higher version of ubuntu				
 
 
 ls ~/.ssh 
