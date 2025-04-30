@@ -177,19 +177,20 @@ Day 17 : 2nd Jan. 2025
 
 	Docker CLI Commands :::
 
-		docker --version 			# Get the docker version 
+		docker --version 		# Get the docker version 
 		
-		docker images 				# Get the list of Container Images in local machine 
+		docker images 			# Get the list of Container Images in local machine 
 		
-		docker ps 					# Get the list of Active/Running Containers in local machine 
+		docker ps 			# Get the list of Active/Running Containers in local machine 
 		
-		docker ps -a 				# Get the list of Active/Running as well as the InActive/Stopped Containers in local machine 
+		docker ps -a 			# Get the list of Active/Running as well as the InActive/Stopped Containers in local machine 
 		
 		docker pull <image_name>	# To Download a Container Image from Container Registry
 		
 		docker run <image_name>		# To create and execute a container based on the image name 
-		
-		
+
+
+
 		Docker Run Command :		# To create and execute a container based on the image name 
 		
 			Modes of Container Execution :		
@@ -202,7 +203,9 @@ Day 17 : 2nd Jan. 2025
 					Eg.: 
 					
 					docker run <image_name>					
-					docker run centos				
+					docker run centos	
+
+						Eg. docker run centos sleep 20
 				
 				- Background/Detached Mode :
 						# The Terminal is accessible while running the container in Background/Detached Mode. 
@@ -211,6 +214,7 @@ Day 17 : 2nd Jan. 2025
 					
 					docker run -d <image_name>					
 					docker run -d centos
+						Eg. docker run -d centos sleep 20
 				
 				- Interactive Mode :
 				
@@ -220,10 +224,11 @@ Day 17 : 2nd Jan. 2025
 
 					docker run -it <image_name>					
 					docker run -it centos 				
-		
+
+
 		docker start <container_id>				# Start the Container 		
 		
-		docker exec -it <container_id> bash 	# Login to the running Container 
+		docker exec -it <container_id> bash 	 		# Login to the running Container 
 			Eg.: 
 			docker exec -it b3eab185c288 bash
 		
