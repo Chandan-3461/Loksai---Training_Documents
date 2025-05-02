@@ -336,12 +336,12 @@ Day 18 : 3rd Jan. 2025
 			
 		
 		
-		docker history <Image_Name>			# Used to find the Image Layers from Local Machine 
+	###	docker history <Image_Name>			# Used to find the Image Layers from Local Machine 
 
 		docker run -it loksaieta/sa-javabuildenv-img:v1.2 bash 	# Create and run a Container based on the new image.
 		
 	
-	Push the Images to Container Registry :::
+  ### Push the Images to Container Registry :::
 	
 		- Login to Container Registry using Docker Cli
 		
