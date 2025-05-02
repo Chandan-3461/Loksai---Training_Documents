@@ -319,19 +319,19 @@ Day 18 : 3rd Jan. 2025
 		
 			Docker File Instructions :::
 			
-			FROM 									# To Identify the Base Image
-			RUN 									# To run the package manager
-			COPY 									# To Copy the file from host volume to container volume
-			CP 										# To Copy the file within the container volumes 
-			ADD 									# To Copy the file from Host Volume as well as from URL
-			ENV 									# To define the Environment Variable 
-			ARG 									# To pass Arguements to the Steps in Dockerfile 
-			EXPOSE									# To Define the Container Port 
-			WORKDIR									# To set the current working directory within the Container 
-			CMD										# To set the default start-up command to the container 
-													  This Command can be changed at run-time.
-			ENTRYPOINT								# To set the default start-up command to the container 
-													  This Command cannot be changed at run-time.	
+			FROM 			# To Identify the Base Image
+			RUN 			# To run the package manager
+			COPY 			# To Copy the file from host volume to container volume
+			CP 			# To Copy the file within the container volumes 
+			ADD 			# To Copy the file from Host Volume as well as from URL
+			ENV 			# To define the Environment Variable 
+			ARG 			# To pass Arguements to the Steps in Dockerfile 
+			EXPOSE			# To Define the Container Port 
+			WORKDIR			# To set the current working directory within the Container 
+			CMD			# To set the default start-up command to the container 
+						  This Command can be changed at run-time.
+			ENTRYPOINT		# To set the default start-up command to the container 
+						   This Command cannot be changed at run-time.	
 			
 			
 		
@@ -339,6 +339,8 @@ Day 18 : 3rd Jan. 2025
 	###	docker history <Image_Name>			# Used to find the Image Layers from Local Machine 
 
 		docker run -it loksaieta/sa-javabuildenv-img:v1.2 bash 	# Create and run a Container based on the new image.
+
+	###  	docker tag -  - : this command is used to rename the docker image.
 		
 	
   ### Push the Images to Container Registry :::
