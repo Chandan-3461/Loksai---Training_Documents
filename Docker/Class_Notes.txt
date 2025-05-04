@@ -517,16 +517,16 @@ Day 19 : 7th Jan. 2025
 		3-Tier Application Architecture :::
 		
 		Micro-Service1 - User_Sign_in Service
-			- Front-End	 			C1 
+			- Front-End	 	C1 
 			
 			- Application Layer 	C2 
 			
-			- DataBase Layer 		C3 
+			- DataBase Layer 	C3 
 			
 			
 		Docker Compose :
 			- Is used to run Multiple Containers as a Service!
-			- Docker Compose is the default package of Container-Engine
+			- Docker Compose is not the default package of Container-Engine
 			- Docker Compose is an extension/plugins to Docker
 			- Create a manifest file *.yaml
 			
