@@ -26,8 +26,9 @@ spec:
 kubectl create -f nginx-pod.yaml
 kubectl get pod
 kubectl get pod -o wide
-kubectl get pod nginx-pod -o yaml
-kubectl describe pod nginx-pod
+kubectl get pod nginx-pod -o yaml                  ## it shows Properties of Manifest file and it shows the content of ETCD.
+kubectl describe pod nginx-pod                     ## used to get the properties of the pod. 
+                                                   ## Question may asked, How you will diagnose kuberntes object ? 
 
 
 *******************************************************************
