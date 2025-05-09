@@ -5,8 +5,8 @@ Day 12 : 20th Dec. 2024
 
 	Build Orchestration Tool - Jenkins.
 	
-	Jenkins - Is an Open-Source Build Orchestration Tool.
-	Used Automate Application Builds and Deployments.
+	Jenkins - Is an Open-Source Build Orchestration Tool.				#### Orchestration is the coordinated execution of multiple IT automation tasks or processes.
+	Used to Automate Application Builds and Deployments.
 	
 	Other Products :
 	
@@ -111,7 +111,6 @@ Day 13 : 24th Dec. 2024
 		- Free Style Projects :
 			# Based on manual configurations
 		
-		
 			
 			Handling Variables in Jenkins :
 			
@@ -121,7 +120,7 @@ Day 13 : 24th Dec. 2024
 				
 				
 				- User-Defined Variables :
-					- these are managed by users to handle the runtime inputs.
+					- these are managed by users to handle the runtime inputs.   				 ### Need to check this one when jenkins open
 
 		
 
@@ -129,8 +128,7 @@ Day 13 : 24th Dec. 2024
 			# Based on groovy scripts 
 			# To onboard the Application to CICD Process.
 			# Used to Automate the Builds and Deployments and any process automation.
-	
-			# Pipeline composed of various stages
+			# Pipeline composed of various stages.
 			# Stages are used to execute some task.
 			
 		Jenkins_Master Node(VM)		- Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
@@ -150,10 +148,13 @@ Day 13 : 24th Dec. 2024
 		Types of Pipeline Projects :
 		
 			- Scripted Pipeline 
-			
+				- Use Scripted pipelines for advanced use cases and when you need more flexibility.
+				- More complex; suited for advanced users
 				
 			
 			- Declarative Pipeline 
+				- Use Declarative pipelines for simplicity and standardized structure.
+				- Easier to read and write; beginner-friendly.
 
 pipeline {
     agent any
@@ -218,7 +219,7 @@ Day 14 : 26th Dec. 2024
 						- Used to Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
 								
 			Jenkins_Slave Node(VM)	- To Execute the Application Build.
-					Agent		- Perform Application Build - Compile, Unit Test, Create Artifacts 
+					Agent	- Perform Application Build - Compile, Unit Test, Create Artifacts 
 	
 	
 	Jenkins_Master Node(VM)			--> git, jdk, jenkins 
@@ -231,6 +232,7 @@ Day 14 : 26th Dec. 2024
 			-> User Name 
 			-> Key Pair
 				- Public key and private key
+
 	
 pipeline {
     agent { label 'slave1' }
@@ -239,13 +241,13 @@ pipeline {
         stage('SCM_Checkout') {
             steps {
                echo "Perform SCM Checkout"
-			   git 'https://github.com/SA-Team-DevOps-03-Dec-24/java-mvn-springbootapp.git'			   
+	       git 'https://github.com/SA-Team-DevOps-03-Dec-24/java-mvn-springbootapp.git'			   
             }
         }
         stage('Application Build') {
             steps {
                 echo "Perform Application Build"
-				sh 'mvn clean package'
+		sh 'mvn clean package'
             }
         }
         stage('Deploy to Test Server') {
@@ -258,7 +260,7 @@ pipeline {
 
 		Environments :
 	
-		Non-Prod Environments														Production Environment (LIVE)
+		Non-Prod Environments													Production Environment (LIVE)
 		
 			Dev Environment	(VM)
 				- Unit Test
@@ -282,25 +284,26 @@ pipeline {
 		
 		
 		Jenkins_Master Node(VM)		- Install jdk,jenkins,git.
-									- Used to Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
+						- Used to Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
 								
 			Jenkins_Slave Node(VM)	- To Execute the Application Build.
 				(Agent)		- Perform Application Build - Compile, Unit Test, Create Artifacts 
 						
 						
-		Tomcat_Server (VM)			- To Execute and Test the Application Artifacts (*.war)
-							- Install jdk, Tomcat.
-							- Tomcat WAS runs in port 8080
+		Tomcat_Server (VM)		- To Execute and Test the Application Artifacts (*.war)
+						- Install jdk, Tomcat.
+						- Tomcat WAS runs in port 8080
 		
 			-> Host Name 
 			-> User Name 
 			-> Key Pair
 				- Public key and private key	
 	
-	
 		Publish Over SSH Plugin is used to copt the artifacts from Jenkins Slave Node to Tomcat Server
 		
 		Install Publish Over SSH Plugin in Jenkins Master.
+
+Tomcat: Apache Tomcat is an open-source web server and servlet container developed by the Apache Software Foundation. Tomcat is a lightweight Java application server that runs Java web apps.
 		
 Next ::
 
@@ -326,24 +329,22 @@ Day 15 : 27th Dec. 2024
 	
 	Tomcat - Web Application Server 
 
-	Deployment ???
+	Deployment ???	- Deployment is putting your application live so users or testers can use it.
 	
 	
-	Source Server																		Target Server 
+	Source Server							Target Server 
 		
-		Jenkins_Slave_Node1																	Tomcat Server
+		Jenkins_Slave_Node1						Tomcat Server
 		
-			*/target/*.war																		/opt/tomcat/webapps
+			*/target/*.war							/opt/tomcat/webapps
 
 	Upon Deployment :
 	
-		
-			*/target/*.war																		/opt/tomcat/webapps/*.war
+			*/target/*.war							/opt/tomcat/webapps/*.war
 
 
 
 	Update the Pipeline with the deployment parameter using pipeline snippet generator
-
 
 
 	
@@ -471,7 +472,7 @@ pipeline {
              post {
                 failure {
                   sh "echo 'Send mail on failure'"
-					mail bcc: 'l@gmail.com', body: 'Jenkins Jobs Status - Please go to ${BUILD_URL} and verify the build', cc: 'l@gmail.com', from: '', replyTo: '', subject: 'SCM-Checkout Failed ', to: 'l@gmail.com'
+		  mail bcc: 'l@gmail.com', body: 'Jenkins Jobs Status - Please go to ${BUILD_URL} and verify the build', cc: 'l@gmail.com', from: '', replyTo: '', subject: 'SCM-Checkout Failed ', to: 'l@gmail.com'
                 }
               }
         }
