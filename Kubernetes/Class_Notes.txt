@@ -349,9 +349,9 @@ Day 22 : 15th Jan. 2025
 			- Perform Upgrade and Downgrade the Pod Versions without any downtime. 
 			- Deployment Strategy called - Rolling Update Strategy to ensure Zero DownTime during Upgrade/Downgrade.
 			
-			-> Creates : 1. Deployment Controller 
-						 2. Replicaset
-						 3. Pod Instances 
+			-> Creates : 	1. Deployment Controller 
+					2. Replicaset
+					3. Pod Instances 
 		
 		What is Deployment of Application Service ???
 		
@@ -376,7 +376,7 @@ Day 22 : 15th Jan. 2025
 			- replicas : 3 
 		
 			mywebapp-img:v1.1			--> Creates 3 replicas of pods : pod1, pod2, pod3 
-										--> Deploy the 3 replicas of pods in available WorkerNodes.
+								--> Deploy the 3 replicas of pods in available WorkerNodes.
 										
 										
 			Web Applications :
@@ -440,11 +440,11 @@ Day 22 : 15th Jan. 2025
 											*.war 
 										
 		
-			Kubernetes Architecture :::							Kubernetes Architecture :::
+			Kubernetes Architecture :::					Kubernetes Architecture :::
 	                                                            
-				Non-Prod Kubernetes Master                            Prod Kubernetes Master 
+				Non-Prod Kubernetes Master                         		Prod Kubernetes Master 
 		                                                        
-					Non-Prod Kubernetes Worker_Node1,2,3,4,5	      	Prod Kubernetes Worker_Node1,2,3,4,5
+					Non-Prod Kubernetes Worker_Node1,2,3,4,5		      	Prod Kubernetes Worker_Node1,2,3,4,5
 	
 	
 	
@@ -482,7 +482,7 @@ Day 23 : 16th Jan. 2025
 	
 		--> Used to Access the Kubernetes Pods
 
-		Services are used to enable the communication to the pods :::
+			Services are used to enable the communication to the pods :::
 		
 		
 		- Cluster-IP Service:
@@ -532,7 +532,7 @@ Day 23 : 16th Jan. 2025
 		
 		3-tier application :
 		
-			- Front-End	Layer				# User Interface 			
+			- Front-End Layer			# User Interface 			
 			
 			- Application-Layer 			# To Create Business Logics 
 			
@@ -543,11 +543,11 @@ Day 23 : 16th Jan. 2025
 		
 			Micro-Service1 - User_Sign_in Service  -  prod
 			
-				- Front-End	 			C1.1,C1.2,C1.3 
+				- Front-End	 	C1.1,C1.2,C1.3 
 				
 				- Application Layer 	C2.1,C2.2,C2.3 
 				
-				- DataBase Layer 		C3.1,C3.2,C3.3  	
+				- DataBase Layer 	C3.1,C3.2,C3.3  	
 				
 	
 		Using Kubernetes Pods :
@@ -556,20 +556,20 @@ Day 23 : 16th Jan. 2025
 			
 			# Without Pod Replicas :::
 
-				- Front-End	 			pods-1.1
+				- Front-End	 	pods-1.1
 				
 				- Application Layer 	pods-2.1
 				
-				- DataBase Layer 		pods-3.1
+				- DataBase Layer 	pods-3.1
 				
 				
 			# With Pod Replicas :::
 			
-				- Front-End	 			pods-1.1,1.2,1.3 
+				- Front-End	 	pods-1.1,1.2,1.3 
 				
 				- Application Layer 	pods-2.1,2.2,2.3 
 				
-				- DataBase Layer 		pods-3.1,3.2,3.3 
+				- DataBase Layer 	pods-3.1,3.2,3.3 
 	
 	
 	
@@ -653,24 +653,23 @@ spec:
 			- Namespaces can be created based on the Environments/Teams 
 			
 			
-		Kubernetes Architecture :::							Kubernetes Architecture :::
+		Kubernetes Architecture :::				 Kubernetes Architecture :::
 															
-			Non-Prod Kubernetes Master                            Prod Kubernetes Master 
+			Non-Prod Kubernetes Master                          	  Prod Kubernetes Master 
 															
 				Non-Prod Kubernetes Worker_Node1,2,3,4,5	      	Prod Kubernetes Worker_Node1,2,3,4,5
 
 
 		Windows File System :
 		
-			C:/ 	
+			C:/ 
+			- Folder1 
+				file1
+				file2 
 
-				- Folder1 
-					file1
-					file2 
-
-				- Folder2 
-					file1
-					file2 
+			- Folder2 
+				file1
+				file2 
 
 	How to Automate Application Build and Deploymen to Kubernetes Cluster using Jnekins ::::
 	
