@@ -58,7 +58,7 @@ Day 16 : 31st Dec. 2024
 					
 					Jenkins_Slave_Node1	(VM) 
 						Install Docker Container-Engine
-							C1 	- Java Application Build maven
+							C1  - Java Application Build maven
 							C2  - Java Application Build maven
 							C3  - Python Application Build
 							C4  - .Net Application Build
@@ -71,8 +71,7 @@ Day 16 : 31st Dec. 2024
 			--> Containerization is a process of packaging the Application along with its dependencies.
 			
 	Environments :
-													
-		
+															
 			Dev Environment	(VM)
 				- Create Source Codes	
 			
@@ -80,7 +79,7 @@ Day 16 : 31st Dec. 2024
 				- Build Application Artifacts 		===> mywebappsvc1_v1.0.war
 				
 				- Unit Test the Application 
-				
+
 					- Using jdk17 & tomcat8.5  - mywebappsvc1.war has been tested successfully.
 					
 				- Package the Applications along with its depedencies :
@@ -162,7 +161,7 @@ Day 16 : 31st Dec. 2024
 			
 			docker images 				# Get the list of Container Images in local machine 
 			
-			docker ps 					# Get the list of Active/Running Containers in local machine 
+			docker ps 				# Get the list of Active/Running Containers in local machine 
 			
 			docker ps -a 				# Get the list of Active/Running as well as the InActive/Stopped Containers in local machine 
 			
@@ -238,7 +237,7 @@ Day 17 : 2nd Jan. 2025
 		docker rm <container_id>				# Remove the Container from Local Machine 
 		
 		docker rm -f <container_id>				# Force - Remove the Container from Local Machine 
-				docker rm -f <container1_id> <container2_id>
+			docker rm -f <container1_id> <container2_id>
 				
 		docker rmi <image_name>					# Remove the Container Image from Local Machine 
 		
@@ -302,14 +301,14 @@ Day 18 : 3rd Jan. 2025
 				
 					docker build <Container_Repository_Name>/<New_Container_Image_Name>:<Tag> .		"." Denotes the Dockerfile Reference.
 					
-					Create Dockerfile ::
-
-					vi Dockerfile
-					
-					FROM ubuntu
-					RUN apt update -y 
-					RUN apt install git -y 
-					RUN apt install maven -y 
+						Create Dockerfile ::
+	
+						vi Dockerfile
+						
+						FROM ubuntu
+						RUN apt update -y 
+						RUN apt install git -y 
+						RUN apt install maven -y 
 					
 			
 					docker build -t loksaieta/sa-javabuildenv-img:v1.2 .			"." Denotes the Dockerfile Reference.	
@@ -390,7 +389,7 @@ Assignment :
 	
 	
 		- Front-End Layer 	# User-Interface
-		- Application Layer # Business Logics 
+		- Application Layer 	# Business Logics 
 		- Back-End Layer  	# DataBase
 
 		
@@ -487,11 +486,11 @@ Day 19 : 7th Jan. 2025
 		
 		Micro-Service1 - User_Sign_in Service
 		
-			- Front-End	 			C1 
+			- Front-End	 	C1 
 			
 			- Application Layer 	C2 
 			
-			- DataBase Layer 		C3 
+			- DataBase Layer 	C3 
 			
 			
 		
@@ -501,10 +500,11 @@ Day 19 : 7th Jan. 2025
 		
 		docker volume inspect sa-vol1
 
-		docker run -it --mount source=sa-vol1,destination=/sa-vol1 ubuntu bash 
+		docker run -it --mount source=sa-vol1,destination=/sa-vol1 ubuntu bash    
+			- This command runs an interactive Ubuntu container with a named volume sa-vol1 mounted to the path /sa-vol1 inside the container, and opens a Bash shell.
 		
 	
-	Container Orchestration :
+	###Container Orchestration :
 
 		- Overview of Docker Compose 
 		
@@ -563,7 +563,7 @@ docker compose version
 
 docker compose up			Start all the container as defined in docker-compose file
 
-docker compose down 		Stop all the container as defined in docker-compose file
+docker compose down 		  	Stop all the container as defined in docker-compose file
 	
 	Container Orchestration Tool :
 	
@@ -571,11 +571,11 @@ docker compose down 		Stop all the container as defined in docker-compose file
 	
 		Micro-Service1 - User_Sign_in Service  -  prod
 		
-			- Front-End	 			C1 
+			- Front-End	 	C1 
 			
 			- Application Layer 	C2 
 			
-			- DataBase Layer 		C3 	
+			- DataBase Layer 	C3 	
 			
 			
 		Environments :::
@@ -587,11 +587,11 @@ docker compose down 		Stop all the container as defined in docker-compose file
 
 			Micro-Service1 - User_Sign_in Service  -  prod
 			
-				- Front-End	 			C1.1,C1.2,C1.3 
+				- Front-End	 	C1.1,C1.2,C1.3 
 				
 				- Application Layer 	C2.1,C2.2,C2.3 
 				
-				- DataBase Layer 		C3.1,C3.2,C3.3  	
+				- DataBase Layer 	C3.1,C3.2,C3.3  	
 				
 				
 			
@@ -610,9 +610,9 @@ docker compose down 		Stop all the container as defined in docker-compose file
 		
 			Service :::
 			
-				Front_End			C1 / Replicas of C1 - 3 Replicas 
+				Front_End		C1 / Replicas of C1 - 3 Replicas 
 				
 				Application_Layer	C2 
 				
-				Back_End (DataBase) C3 
+				Back_End (DataBase) 	C3 
 				
