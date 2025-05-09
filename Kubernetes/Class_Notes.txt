@@ -112,26 +112,57 @@ Related to the Project :::
 	
 	
 	Kubernetes Architecture & its Components!
+		
+		Kubernetes is like a manager for containers. It helps run, scale, and manage containerized apps across many machines.
 	
 		Kubernetes Components ::::
+			1. Master Node (Control Plane): This is the brain of Kubernetes. It controls and decides what happens in the cluster.
 
-			API_Server 				--> # Acts as an interface to the kubernetes 
+					API_Server 					--> 	# The front door; takes commands (like kubectl) and talks to other components.
+												# Acts as an interface to the kubernetes 
 			
-			ETCD 					--> # Single point of Source for Kubernetes Components 
+					ETCD 						--> 	# Single point of Source for Kubernetes Components 
+												# A small database that stores all cluster info (like a memory of the system).
 			
-			Scheduler				--> # To identify the Healthy Node for Deployments
+					Scheduler					-->	# To identify the Healthy Node for Deployments
+												# Decides which node should run a new container (pod).
 			
-			Controller Manager 		  	--> # To run the pods in its desired state 
-			
-			
-			Kubelet 				--> # Is a Kubernetes Agent used to Create & Deploy the Pods
-			
-			KubeProxy				--> # Is used to enable pod networking by create Pod IP Address			
-			
-			CRI - Container RunTime Interface (Container-D) 	--> # It is used identify the Image from Container Registry for deployment
+					Controller Manager 		  		-->	# To run the pods in its desired state.
+												# Makes sure things are running as expected (e.g., restarts crashed pods).
+
+			2. Worker Nodes (Node): These are the machines (or VMs) where your apps actually run.
 				
+					Kubelet 					-->	# Is a Kubernetes Agent used to Create & Deploy the Pods
+												# Talks to the master and makes sure the pods are running on this node.
+			
+					KubeProxy					-->	# Is used to enable pod networking by create Pod IP Address	
+												# Handles network traffic, like sending requests to the right pod.
+			
+					CRI - Container RunTime Interface (Container-D) 	--> 	# It is used identify the Image from Container Registry for deployment.
+
+			 3. Pods: Smallest unit. A pod runs one or more containers that are tightly connected.
 				
-		
+			 4. How Kubernetes Works Step by Step:
+				
+				1)You give a command using kubectl (like creating a deployment or service).
+					
+				2) The API Server (in the Control Plane) receives this request and checks if it's valid.
+					
+				3) Once approved, the request is stored in etcd, which is Kubernetes’ memory of all the desired states.
+					
+				4) The Scheduler sees there's a new task (like running a pod) and chooses the best Worker Node based on available resources (CPU, memory, etc.).
+					
+				5) The Controller Manager ensures that the desired state (like 3 replicas of a pod) is maintained. If something crashes, it brings it back.
+					
+				6) On the selected Worker Node, the Kubelet takes instructions from the Control Plane and starts the pod with your app using the Container Runtime (e.g., Docker or containerd).
+					
+				7) The Kube Proxy on the Worker Node helps handle network rules, so your app can be reached internally or externally.
+					
+				Now your app is up and running, and Kubernetes continues to monitor it. If anything fails or changes, Kubernetes automatically fixes or adjusts it.
+					
+
+
+
 		Kubernetes Concepts / Terminologies ::::
 		
 		
