@@ -50,6 +50,12 @@ Day 25 : 21st Jan. 2025
 		-> Why we need Ansible?
 		
 		-> Features of Ansible 
+			- It's used for server provisioning
+			- It's mainly used for configuration Management
+			- supports contineous Delivery
+			- also we can do application deployment
+			- it's used for security compliences.
+			- It's simple, powerful and agentless.
 		
 		-> Ansible Architecture ::
 		
@@ -57,7 +63,6 @@ Day 25 : 21st Jan. 2025
 			
 				- Ansible Controller 
 					- Ansible Nodes 
-		
 				
 		
 		-> Ansible Architecture Components
