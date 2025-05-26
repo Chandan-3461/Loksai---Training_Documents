@@ -421,7 +421,7 @@ Ansible Roles :::
 
 		Are used to organize the Ansible Components 
 		
-		for Reusability
+		for Reusability, redability, modularity and sharing across different teams and over ansible-galaxy.
 		
 		Use git remote repositories to maintain the Ansible Roles.
 		
